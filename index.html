@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <style>
+        body {
+            background: teal;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 4rem;
+        }
+
+        .boxesContainer {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .box:nth-child(3) {
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+
+        .box:nth-child(5) {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        .box:nth-child(6) {
+            border-top: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            border-left: 1px solid;
+            box-shadow: 0px 2px 25px #3fa;
+        }
+
+        .box:nth-child(7) {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        .box:nth-child(9) {
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+        
+        .titleDiv {
+            padding: 1rem;
+            width: 20rem;
+        }
+
+        #resetBtn {
+            padding: 10px 1rem;
+            background: deepskyblue;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-family: monospace;
+            width: 8rem;
+            height: 3rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        #overlay {
+            justify-content: center;
+            align-items: center;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.437);
+            width: 15.3rem;
+            height: 15.3rem;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxesContainer">
+            <div id="overlay">
+                <button onclick="reset()" id="resetBtn">Restart</button>
+            </div>
+
+            <div id="0" class="box"></div>
+            <div id="1" class="box"></div>
+            <div id="2" class="box"></div>
+            <div id="3" class="box"></div>
+            <div id="4" class="box"></div>
+            <div id="5" class="box"></div>
+            <div id="6" class="box"></div>
+            <div id="7" class="box"></div>
+            <div id="8" class="box"></div>
+        </div>
+        <div class="titleDiv">
+            <h1 id="title">Start playing the game.</h1>
+            <button onclick="reset()" id="resetBtn">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
